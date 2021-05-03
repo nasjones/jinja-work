@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content%}
+<form action="/story">
+	<h1>Madlib Maker</h1>
+	{% for val in vals%}
+	<div>
+		<label for="{{val}}">{{val}}</label>
+		<input type="text" name="{{val}}" id="{{val}}-input" required />
+	</div>
+	{%endfor%}
+	<button type="submit">Submit</button>
+</form>
+{% endblock %}
